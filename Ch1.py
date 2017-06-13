@@ -42,3 +42,11 @@ def friends_of_friends_ids_bad(user):
     return [foaf["id"]
         for friend in user["friends"]
         for foaf in friend["friends"]]
+            
+def not_the_same(user, other_user):
+    return user["id"] != other_user["id"]
+    
+def not_friends(user, other_user):
+    return all(not_the_same(friend,other_user) for friend in user["friends"])
+
+
