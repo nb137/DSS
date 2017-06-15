@@ -1,0 +1,7 @@
+So I come back to my work computer from home where I've updated the master branch. But my master branch on my work computer does not contain the new file that I created...
+
+So I hit pull, which is doing a fetch + merge where:
+	Fetch = update remote branches
+	Merge = merge those updates into the local repo (the files on your computer)
+
+And so the files are now updated onto the machine you're currently working on.

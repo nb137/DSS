@@ -27,7 +27,7 @@ git add *	#[or git add <filename>]
 
 git commit -m "message about this commit"
 
-#ile is now in "head" and ready to be pushed to the remote repository
+#file is now in "head" and ready to be pushed to the remote repository
 
 git push origin <branch>
 
