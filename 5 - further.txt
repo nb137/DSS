@@ -1,0 +1,38 @@
+What else should you be able to do or should you try?
+
+Branching work with git and github desktop:
+
+GHDT:
+Select Branch -> new branch
+Add name of branch
+Created, but only on local repository (your computer). You can do your edits now and work on your branch (for me I created one for week 2.5 [bc I had already done some of week 2 in the master])
+
+Git:
+-- I need to do this at home to ensure it is correct --
+git checkout -b <branch name>
+(if branch name doesnt exist, it is created. if it does, you are now working in that branch...)
+(do work on your project)
+git push origin <branch name> 
+	
+	NOT master where <branch name> because you are working on a different branch
+
+
+
+
+Merging branches locally with git:
+You have been doing work in the branch called Week2 and you want to take all of those changes into Master to be the main work area
+
+First, make sure your work is saved into your working branch (week2)
+git branch week2
+git add *
+git commit -m "commit message"
+git push origin week2
+
+now lets merge master into week2 so we can see if there are conflicts while still working in the week2 branch (instead of possibly causing issues in master)
+(make sure still in git branch week2)
+git merge master
+(look for conflicts)
+
+now we will add the new work into master
+git checkout master
+git merge week2
