@@ -8,7 +8,11 @@ We start up our computer and know that our local repo (home computer) doesn't ha
 
 similar to the desktop version, we need to pull our repo to our local machine
 
+move into your working directory, for me at home I go into user/Desktop/DSfS
+
 we can use [git pull] or ([git fetch] and then [git merge])
+
+simply entering "git pull" works and finishes it
 
 https://git-scm.com/docs/git-pull
 https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch
