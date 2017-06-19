@@ -18,3 +18,9 @@ https://git-scm.com/docs/git-pull
 https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch
 
 git pull [options] [<repository> ...]
+
+After you've done your work you can push the changes again like in file 1. If you delete files you have to add --all to your indexing command:
+
+git add --all
+git commit -m "comment about this edit"
+git push origin master
