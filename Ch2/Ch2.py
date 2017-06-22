@@ -31,3 +31,23 @@ s.add(2)    # (1,2)
 s.add(2)    #still (1,2)
 ''' in is a very fast operation on sets'''
 print(2 in s)
+
+def double(x):
+    return 2 * x
+
+#map
+xs = [1,2,3,4]
+'''LIST COMPREHENSION'''
+twice_xs = [double(x) for x in xs]
+twice_xs = map(double, xs)
+
+#filter
+def is_even(x):
+    return x % 2 == 0
+    
+x_evens = [x for x in xs if is_even(x)]
+x_evens = filter(is_even, xs)
+#using partial
+from functools import partial
+list_evener = partial(filter, is_even)
+x_evens = list_evener(xs)
