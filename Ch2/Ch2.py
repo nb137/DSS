@@ -51,3 +51,14 @@ x_evens = filter(is_even, xs)
 from functools import partial
 list_evener = partial(filter, is_even)
 x_evens = list_evener(xs)
+
+#zip unzip
+list1 = ["a",'b','c']
+list2 = [1,2,3]
+zipped = zip(list1, list2)
+unz1, unz2 = zip(*zipped)
+
+# args
+def magic(*args, **kwargs):
+    print ("unnamed args:",args)
+    print("keyword args:",kwargs)
