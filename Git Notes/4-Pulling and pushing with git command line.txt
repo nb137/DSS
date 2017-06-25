@@ -2,8 +2,6 @@ This will be doing the same as tutorial 2 and 3, but from the command line inste
 
 It is in this order because I use command line at home and the desktop app at work, and I need to update both whenever I get to home or work and want to do work on my data.
 
-## To be edited at home to make sure the steps work properly
-
 We start up our computer and know that our local repo (home computer) doesn't have the freshest files from the remote repository (github)
 
 similar to the desktop version, we need to pull our repo to our local machine
@@ -21,6 +19,6 @@ git pull [options] [<repository> ...]
 
 After you've done your work you can push the changes again like in file 1. If you delete files you have to add --all to your indexing command:
 
-git add --all
+git add --all	# files that I've deleted will be deleted in the repository
 git commit -m "comment about this edit"
 git push origin master

@@ -3,18 +3,17 @@ Create your github account
 ensure you have Git
 
 Learn the general git flow (link?)
+http://rogerdudler.github.io/git-guide/
 
 Take a look at my github repository
 https://github.com/nb137/DSS
 
-and follow this guide ("the guide")
-http://rogerdudler.github.io/git-guide/
 
 Clone the repo to your local device
 https://help.github.com/articles/cloning-a-repository/
 https://stackoverflow.com/questions/651038/how-do-you-clone-a-git-repository-into-a-specific-folder
 
-git clone https://github.com/nb137/DSS.git ./DSSfs_local
+git clone https://github.com/nb137/DSS.git ./folder
 
 *do whatever work you want before you have to upload*
 

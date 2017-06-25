@@ -8,6 +8,7 @@ Add name of branch
 Created, but only on local repository (your computer). You can do your edits now and work on your branch (for me I created one for week 2.5 [bc I had already done some of week 2 in the master])
 
 Git:
+(make sure you are in the directory that you are working on)
 git checkout -b <branch name>
 (if branch name doesnt exist, it is created. if it does, you are now working in that branch...)
 (do work on your project)
@@ -19,11 +20,12 @@ git push origin <branch name>
 A new branch was created. How do you get your local git to know?
 git fetch origin
 
-Hey look, a new branch was created on github. Now we can work on it by using
+Hey look, a new branch was created on github. We got it locally by using the above. Now we can work on it by using
 git checkout new-branch-name
 and now our files on the local computer will look like that. if we want to work on the master files instead we can use
 git checkout masteR
 but master will not be automatically updated from the fetch command. we will have to push and pull
+git pull origin
 
 
 Merging branches locally with git:
