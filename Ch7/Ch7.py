@@ -69,4 +69,4 @@ def beta_pdf(x, alpha, beta):
         return 0
     return x** (alpha-1)*(1-x)**(beta-1) / B(alpha, beta)
 
-# pg 139
+# I should look more into Bayesian inference since I don't quite understand it here
