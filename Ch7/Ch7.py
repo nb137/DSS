@@ -12,7 +12,7 @@ from numpy import random, mean, median
 import statistics
 import math
 import random
-from prob_dists import *
+from prob_dists import * # we wrote this to contian probability distributions
 
 
 normal_probability_below = normal_cdf
@@ -57,6 +57,12 @@ def estimated_parameters(N, n):
     return p, sigma
 
 def a_b_test_statistic(N_A, n_A, N_B, n_B):
+    ''' 
+    AB Test Stat returns a z-test of A and B
+    Returns the Z value, which can be used in a Z distribution
+    to find P, the probability of them being the same
+    As he says, a T test should be used unless sigma is known
+    '''
     p_A, sigma_A = estimated_parameters(N_A, n_A)
     p_B, sigma_B = estimated_parameters(N_B, n_B)
     return (p_B - p_A) / math.sqrt(sigma_A ** 2 + sigma_B**2)
