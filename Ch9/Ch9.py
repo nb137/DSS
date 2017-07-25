@@ -36,6 +36,27 @@ with open('colon_delimited_stock_prices.txt', 'rt') as f:
 
 from bs4 import BeautifulSoup
 import requests
-site = "https://news.ycombinator.com/"
+site = "https://www.safaribooksonline.com/search/?query=data"
 html = requests.get(site).text
 soup = BeautifulSoup(html, 'lxml')
+
+'''
+None of this really works, the website is laid out completely
+different than the book
+'''
+
+import	json
+serialized	=	"""{	"title":"Data Science Book",
+                 "author":"Joel Grus",
+                 "publicationYear":2014,
+                 "topics":["data","science","data science"]}"""
+deserialized = json.loads(serialized)
+
+import requests
+endpoint = "https://api.github.com/users/nb137/repos"
+repos = json.loads(requests.get(endpoint).text)
+repoNames = [repo["name"] for repo in repos]
+
+'''
+Look at pandas and scrapy (web scraping)
+'''
