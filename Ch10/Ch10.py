@@ -41,3 +41,27 @@ plt.scatter(xs,ys2, marker='.',color="gray",label="ys2")
 
 np.correlate(xs,ys1)
 np.correlate(xs,ys2)
+
+'''
+Now we're going to do a multivariate scatter plot matrix from scratch
+but you can really just look into
+pandas.plotting.scatter_matrix
+'''
+from scipy.stats import correlation, standard_deviation, mean
+from linear_algebra import shape, get_row, get_column, make_matrix, \
+    vector_mean, vector_sum, dot, magnitude, vector_subtract, scalar_multiply
+
+def correlation_matrix(data):
+    _,num_columns = shape(data)
+    def matrix_entry(i,j):
+        return correlation(get_column(data,i), get_column(data,j))
+    return make_matrix(num_columns, num_columns, matrix_entry)
+
+# Just skipping the plot here because pandas does it all
+import pandas as pd
+from pandas.tools.plotting import scatter_matrix
+tit = pd.read_csv("C://Users/nathan.brunner/Desktop/titanic.csv")
+tit["Sex"] = [int(i) for i in tit["Sex"]=="male"]
+scatter_matrix(tit[["Survived","Pclass","Sex","Age","SibSp","Fare"]])
+# look, we did it
+
