@@ -55,3 +55,12 @@ from scipy.special import expit
 from scipy.stats import logistic
 def logistic_prime(x):
     return sigmoid(x) * (1-sigmoid(x))
+
+# Here I don't feel like copying the log adn log derivative equation functions, so...
+
+from sklearn.linear_model import LogisticRegression
+model = LogisticRegression()
+mdl = model.fit(x,y)
+beta_estaime2 = model.coef_
+
+''' However I can't figure out how to de-normalize the results and they don't seem to be the best fit '''
